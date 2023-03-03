@@ -1,0 +1,60 @@
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>jQuery UI Switch Class Example</title>  
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <!-- CSS -->  
+      <style>  
+         .LargeClass  
+         {  
+            font-family: NewTimesRoman;  
+            font-size: large;  
+            font-weight: bold;  
+            color: Red;  
+         }  
+         .NormalClass  
+         {  
+            font-family: Arial;  
+            font-size: small;  
+            font-weight: bold;  
+            color: Blue;  
+         }  
+      </style>  
+      <script>  
+         $(function() {  
+            $('#btnSwitch').click(function(){  
+               $(".NormalClass").switchClass("NormalClass","LargeClass",'slow');  
+               $(".LargeClass").switchClass("LargeClass","NormalClass",'slow');  
+               return false;  
+            });  
+         });  
+      </script>  
+   </head>  
+   <body>  
+   <pre>The jQuery UI switchClass() method is used to move from one CSS class to another CSS class, 
+   animating the transition from one state to another state.
+   .switchClass( removeClassName, addClassName ,[option])</pre>
+   <pre>options: It is used to specify all animation settings. All properties are optional. Its possible values are:
+
+Duration:This is a string or number. It specifies how long the animation will run. Its default value is 400.
+
+Easing:It is a string which specifies the easing function used for transition. Its default value is swing.
+
+Complete:It is a callback method called for each element when the effect is completed for this element.
+
+Children: This is a Boolean type and specifies whether the animation should additionally be applied to all descendants of the matched elements. Its default value is FALSE.
+
+Queue:This is of Boolean type or string type and specifies whether to place the animation in the effects queue. Its default value is TRUE</pre>
+      <div class="NormalClass">  
+        You are here at UI switch class  
+      </div>  
+      <div class="NormalClass">  
+this example is commited to provide easy learning of UI switch class.
+      </div>  
+      <br />  
+      <input type="button" id="btnSwitch" value="Switch Class" />  
+   </body>  
+</html>

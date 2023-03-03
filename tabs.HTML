@@ -1,0 +1,166 @@
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>jQuery UI Tabs </title>  
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <script> 
+         $(function() {  
+               $( "#tabs-1" ).tabs();  
+        });
+        
+        
+            $(function () {  
+               $( "#tabs-2" ).tabs({  
+                  heightStyle:"fill",  
+                  collapsible:false,                                    
+                  hide:"slideUp",
+                  active:0
+               });  
+            });  
+         
+        
+         $(function() {  
+            $( "#tabs-3" ).tabs({  
+               event:"mouseover"  
+            });  
+         });  
+        
+         
+            $(function() {  
+               $( "#tabs-4" ).tabs();
+               $( "#tabs-4" ).tabs("disable"); 
+               //$( "#tabs-4" ).tabs("disable",2);
+                 
+            });  
+         </script>  
+      <style>  
+         #tabs-1{font-size: 14px;}  
+         .ui-widget-header {  
+            background:lightpink;  
+            border: 1px solid #b9cd6d;  
+            color: lightyellow;  
+            font-weight: bold;  
+         }  
+      </style> 
+      
+      
+   </head>  
+   <body>  
+      UI WIDGET- TABS:
+    <pre style="text-align: left;color:orangered;font-size: larger;">Tabs are the set of logically grouped content that facilitates users to flip between them.
+        Tab must be in ordered or unordered list</pre>
+        SYNTAX:
+        <pre style="text-align: left;color:orangered;font-size: larger;">
+        $(selector, context).tabs (options) </strong><br>
+        $(selector, context).tabs ("action", params)  </pre>
+
+        OPTIONS:
+        <pre style="text-align: left;color:orangered;font-size: larger;">
+        active, disabled,collapsible,event,heightStyle,hide,show</pre>
+
+        ACTION:
+        <pre style="text-align: left;color:orangered;font-size: larger;">
+       destroy,disable,disable(index),enable,enable(index),load(index),option,refresh,widget
+        
+         </pre>
+      <div id="tabs-1">  
+         <ul>  
+            <li><a href="#tabs-5">HTML</a></li>  
+            <li><a href="#tabs-6">CSS</a></li>  
+            <li><a href="#tabs-7">JAVA SCRIPT</a></li>  
+         </ul>  
+         <div id="tabs-5">  
+            <p>The HyperText Markup Language, or HTML is the standard markup language<br>
+                 for documents designed to be displayed in a web browser.<br>
+                 It can be assisted by technologies such as CSS and scripting languages<br>
+                  such as JavaScript.
+ </p>  
+         </div>  
+         <div id="tabs-6">  
+            <p>Cascading Style Sheets is a style sheet language<br>
+               used for describing the presentation of a document<br>
+                written in a markup language such as HTML.</p> 
+         </div>  
+         <div id="tabs-7">  
+            <p>JavaScript is the world's most popular programming language.<br> 
+                It is the programming language of the Web.
+</p>  
+         </div>  
+      </div>  
+      <div id="tabs-2">  
+         <ul>  
+            <li><a href="#tabs-5">HTML</a></li>  
+            <li><a href="#tabs-6">CSS</a></li>  
+            <li><a href="#tabs-7">JAVA SCRIPT</a></li>  
+         </ul>  
+         <div id="tabs-5">  
+            <p>The HyperText Markup Language, or HTML is the standard markup language<br>
+                 for documents designed to be displayed in a web browser.<br>
+                 It can be assisted by technologies such as CSS and scripting languages<br>
+                  such as JavaScript.
+ </p>  
+         </div>  
+         <div id="tabs-6">  
+            <p>Cascading Style Sheets is a style sheet language<br>
+               used for describing the presentation of a document<br>
+                written in a markup language such as HTML.</p> 
+         </div>  
+         <div id="tabs-7">  
+            <p>JavaScript is the world's most popular programming language.<br> 
+                It is the programming language of the Web.
+</p>  
+         </div>  
+      </div>  
+      <div id="tabs-3">  
+         <ul>  
+            <li><a href="#tabs-5">HTML</a></li>  
+            <li><a href="#tabs-6">CSS</a></li>  
+            <li><a href="#tabs-7">JAVA SCRIPT</a></li>  
+         </ul>  
+         <div id="tabs-5">  
+            <p>The HyperText Markup Language, or HTML is the standard markup language<br>
+                 for documents designed to be displayed in a web browser.<br>
+                 It can be assisted by technologies such as CSS and scripting languages<br>
+                  such as JavaScript.
+ </p>  
+         </div>  
+         <div id="tabs-6">  
+            <p>Cascading Style Sheets is a style sheet language<br>
+               used for describing the presentation of a document<br>
+                written in a markup language such as HTML.</p> 
+         </div>  
+         <div id="tabs-7">  
+            <p>JavaScript is the world's most popular programming language.<br> 
+                It is the programming language of the Web.
+</p>  
+         </div>  
+      </div>  
+      <div id="tabs-4">  
+         <ul>  
+            <li><a href="#tabs-5">HTML</a></li>  
+            <li><a href="#tabs-6">CSS</a></li>  
+            <li><a href="#tabs-7">JAVA SCRIPT</a></li>  
+         </ul>  
+         <div id="tabs-5">  
+            <p>The HyperText Markup Language, or HTML is the standard markup language<br>
+                 for documents designed to be displayed in a web browser.<br>
+                 It can be assisted by technologies such as CSS and scripting languages<br>
+                  such as JavaScript.
+ </p>  
+         </div>  
+         <div id="tabs-6">  
+            <p>Cascading Style Sheets is a style sheet language<br>
+               used for describing the presentation of a document<br>
+                written in a markup language such as HTML.</p> 
+         </div>  
+         <div id="tabs-7">  
+            <p>JavaScript is the world's most popular programming language.<br> 
+                It is the programming language of the Web.
+</p>  
+         </div>  
+      </div>  
+   </body>  
+</html>

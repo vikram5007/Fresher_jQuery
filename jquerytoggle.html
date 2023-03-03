@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Switch Class Example</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <style>
+         .class1 {
+            border-width : 10px;
+            border-color : grey;
+            background-color : #cedc98;
+            color : black;
+         }
+      </style>
+      
+      <script>
+         function toggle () {
+            $("#para").toggleClass ("class1", 1000);
+         }
+         
+        
+         function toggle1 () {
+            $("#para1").toggle("explode",1000);
+         }
+         function toggle2 () {
+            $("#para2").toggle("bounce",1000);
+         }
+         function toggle3 () {
+            $("#para3").toggle("puff",1000);
+         }
+         function toggle4 () {
+            $("#para4").toggle("slide",5000);
+         }
+         function toggle5 () {
+            $("#para5").toggle("drop",1000);
+         }
+
+         function toggle6 () {
+            $("#para6").fadeToggle(2000,"swing");
+         }
+         
+         function toggle7 () {
+            $("#para7").slideToggle(2000,"swing");
+         }
+      </script>
+   </head>
+   
+   <body>
+      <div id = "para" style = "border-style:solid;width: 100px;height: 100px;"> Hi there </div>
+      <button onclick = toggle()> Toggle class</button>
+
+      <div id = "para1" style = "border-style:solid;width: 100px;height: 100px;"> Hi there </div>
+      <button onclick = toggle1()> Toggle explode</button>
+
+      <div id = "para2" style = "border-style:solid;width: 100px;height: 100px;"> Hi there </div>
+      <button onclick = toggle2()> Toggle bounce</button>
+
+      <div id = "para3" style = "border-style:solid;width: 100px;height: 100px;"> Hi there </div>
+      <button onclick = toggle3()> Toggle puff</button>
+
+      <div id = "para4" style = "border-style:solid;width: 100px;height: 100px;"> Hi there </div>
+      <button onclick = toggle4()> Toggle slide</button>
+
+      <div id = "para5" style = "border-style:solid;width: 100px;height: 100px;"> Hi there </div>
+      <button onclick = toggle5()> Toggle drop</button>
+
+      <div id = "para6" style = "border-style:solid;width: 100px;height: 100px;"> Hi there </div>
+      <button onclick = toggle6()> Togglefade</button>
+
+      <div id = "para7" style = "border-style:solid;width: 100px;height: 100px;"> Hi there </div>
+      <button onclick = toggle7()> Toggle slide</button>
+      
+
+   </body>
+</html>

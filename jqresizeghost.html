@@ -1,0 +1,42 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery UI Resizable functionality</title>
+        <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+        <style>
+            .ui-widget-header {
+                background: lightyellow;
+            border: 1px solid #b9cd6d;
+            color: red;
+            font-weight: initial;
+            }
+            .ui-widget-content {  
+            background: lightgreen;  
+            border: 1px solid #DDDDDD;  
+            color: Red;  
+         }  
+         #resizable-2,#resizable-3 { width: 150px; height: 150px; padding: 0.6em;  text-align: center; margin: 0; }
+            </style>
+            <script>
+                $(function() {
+                    $( "#resizable-2" ).resizable({
+                        animate: true
+                    });
+                    $( "#resizable-3" ).resizable({
+                        ghost: true
+                    });
+                });
+                </script>
+                </head>
+                <body>
+                    <div id="resizable-2" class="ui-widget-content">
+                        <h1 class="ui-widget-header">animation!</h1>
+                        </div><br>
+                        <div id="resizable-3" class="ui-widget-content">
+                            <h2 class="ui-widget-header">I'm ghost!!</h2>
+                            </div>
+                            </body>
+                            </html>
+                            

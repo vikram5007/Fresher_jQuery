@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        var x = 0;
+        $(document).ready(function(){
+            $(window).resize(function(){
+                $("span").text(x += 1);
+            });
+        });
+        </script>
+    </head>
+    <body>
+    <p>Window Resized <span>0</span> times.</p>
+    <p>resizing my window.</p>
+    </body>
+</html>

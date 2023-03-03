@@ -1,0 +1,101 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+<meta charset="utf-8">  
+<title>jQuery UI Tooltip </title>  
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+  
+<!-- Javascript -->  
+<script>  
+$(function() {  
+$("#tooltip-1").tooltip();  
+$("#tooltip-2").tooltip();  
+});  
+ 
+$(function() {  
+$( "#tooltip-3" ).tooltip({  
+content: "<strong>Hello</strong>",  
+track:false  
+}),  
+$( "#tooltip-4" ).tooltip({  
+disabled: true  
+});  
+});  
+$(function() {  
+            $('.tooltip-9').tooltip({  
+               items: 'a.tooltip-9',  
+               content: 'Are you looking for a training program?',  
+               show: "slideDown", 
+               open: function(event, ui)  
+               {  
+                  ui.tooltip.hover(  
+                  function () {  
+                     $(this).fadeTo("slow", 0.5);  
+                  });  
+               }  
+            });  
+         });  
+         $(function() {  
+            $('.tooltip-10').tooltip({  
+               items: 'a.tooltip-10',  
+               content: 'Welcome',  
+               show: "fold",   
+               close: function(event, ui)  
+               {  
+                  ui.tooltip.hover(function()  
+                  {  
+                     $(this).stop(true).fadeTo(500, 1);   
+                  },  
+                  function()  
+                  {  
+                     $(this).fadeOut('500', function()  
+                     {  
+                        $(this).remove();  
+                     });  
+                  });  
+               }  
+            });  
+         });  
+</script>  
+
+</head>  
+<body> 
+UI WIDGET-TOOLTIP: 
+<pre style="text-align: left;color:orangered;font-size: larger;">
+    The native tooltip is replaced by jQuery UI tooltip widget
+    because the jQuery UI tooltip allows customization and adds new themes.
+    Tooltips are used with the element to display a title in the title box next to the element, 
+    when you hover the element with your mouse. </pre>
+SYNTAX: 
+<pre style="text-align: left;color:orangered;font-size: larger;">
+$(selector, context).tooltip (options)</strong>
+$(selector, context).tooltip ("action", [params]) </pre>
+
+OPTIONS:
+<pre style="text-align: left;color:orangered;font-size: larger;">
+content,disabled,hide,items,position,show,tooltipClass,track</pre>
+ACTION:
+<pre style="text-align: left;color:orangered;font-size: larger;">
+close,destroy,enable,disable,open,option,widget</pre>
+EVENT METHOD:
+<pre style="text-align: left;color:orangered;font-size: larger;">
+create(event,ui),close(event,ui),open(event,ui)</strong>
+</pre>
+<hr>
+<label for="comment">What is your comment:</label>  
+<input id="tooltip-1" title="We are asking your comment just for feedback">  
+<p><a id="tooltip-2" href="#" title="It is the best  website.">  
+I also have a tooltip  
+</a></p> 
+<label for="name">Here is the message:</label>  
+<input id="tooltip-3" title="tooltip"><br><br><br>  
+<label for="name">Tooltip is disabled:</label>  
+<input id="tooltip-4" title="tooltip">   
+<div id="target">  
+    <a href="#" class="tooltip-9">Hover over me!</a><br/>  
+    <a href="#" class="tooltip-10">Hover over me too!</a>  
+ </div>  
+</body>  
+</html> 

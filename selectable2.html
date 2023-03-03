@@ -1,0 +1,49 @@
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>jQuery UI Selectable</title>  
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <style>  
+         #select-1 .ui-selecting,#select-2 .ui-selecting {   
+            background: gray ; }  
+         #select-1 .ui-selected,#select-2 .ui-selected {   
+            background: crimson; color: white; } 
+         #select-1,#select-2 {   
+            list-style-type: none; margin: 0; padding: 0; width: 200px; }  
+         #select-1 li,#select-2 li {   
+            margin: 5px; padding: 0.4em; font-size: 18px; height: 20px; }  
+         .ui-widget-content {  
+            background: turquoise;  
+            border: 2px solid black;  
+            color: black;    
+         }  
+      </style>  
+      <script>  
+         $(function() {  
+            $( "#select-1" ).selectable();  
+            $( "#select-1" ).selectable('disable');  
+            $( "#select-2" ).selectable();  
+            $( "#select-2" ).selectable( "option", "distance", 1 );   
+         });  
+      </script>  
+   </head>  
+   <body>  
+      <h3>Disabled</h3>  
+      <ol id="select-1">  
+         <li class="ui-widget-content">First</li>  
+         <li class="ui-widget-content">Second</li>  
+         <li class="ui-widget-content">Third</li>  
+         <li class="ui-widget-content">Fourth</li> 
+      </ol>  
+      <h3>Can be Selected</h3>  
+      <ol  id="select-2">  
+         <li class="ui-widget-content">Fifth</li>  
+         <li class="ui-widget-content">Sixth</li>  
+         <li class="ui-widget-content">Seventh</li> 
+         <li class="ui-widget-content">Eighth</li> 
+      </ol>  
+   </body>  
+</html>
